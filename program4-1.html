@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>week 4: Template Only-Add Two Numbers</title>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+        <body>
+            <header>
+                <h1>Week 4 Templates</h1>
+                <h2>Debra Jones</h2>
+            </header>
+            <main>
+                <h3>Add Two Numbers</h3>
+                <label>Enter Number One: <input type="number" id="number1"></label>
+              <label>Enter Number Two: <input type="number" id="number2"></label>
+                <label><button onclick="addNumbers()">Add Numbers</button></label>
+                <hr>
+                <p><span id="output"></span></p>
+            </main>
+            <footer>
+                &copy;20 &bull; Debra Jones &bull; BYU-Idaho &bull; CIT 160
+            </footer>
+            <script>
+                function addNumbers(){
+                    let x = parseFloat(document.getElementById('number1').value);
+                    let y = parseFloat(document.getElementById('number2').value);  
+                    let sum = x + y;
+                    document.getElementById('output').innerHTML = "The sum of " + x + " and " + y + " equals " + sum + "!";
+               
+               
+                }
+
+            </script>
+           
+        </body>
+    
+
+
+
+</html> 
