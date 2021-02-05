@@ -8,36 +8,34 @@
 
   <body>
     <header>
-      <h1>Module 5 Convert Pounds to Kilometers</h1>
+      <h1> Convert Pounds to Kilometers</h1>
       <h2>Debra Jones</h2>
     </header>
     <main>
       <h3>Convert Pounds to Kilograms</h3>
-      <label>Enter Amount in Pounds:<input type="text" id="pounds" /></label>
-      <label
-        ><button type="button" onclick="poundsToKilograms()">
-          Convert Numbers
-        </button></label
-      >
-      <hr />
-      <p>output:<span id="output"></span></p>
+      <label>Enter Amount in Pounds:<input type="text" id="pounds" placeholder="Enter Here"></label>
+      <label>
+        <button onclick="poundsToKilograms()">
+          Convert to Kilograms
+        </button></label>
+      
+      <hr>
+      <span id="outputKilograms"></span>
     </main>
 
     <script>
-      // round the display answer to one decimal and label the output, e.g., 50.6 Kilograms
-      // program should correctly hand REAL NUMBERS (parsefloat) such as 160.5. This input should   return and display 72.8 kilograms a round to one decimal answer
-      // program must use a button click to handle the conversion event
+      
 
       function poundsToKilograms() {
-          //input val
-       let text = document.getElementById("pounds").value;
-           // processing
-       let pounds = parseFloat(text);
-
-           //conversion factor from pounds to kilograms
-        let kilograms = 1 * 0.45359237;
-        //output
-        document.getElementById("output").textContent = `${kilograms.tofixed(1)}` + Kilograms;}
+    //INPUT - user enters pounds into text field
+    let pounds = parseFloat(document.getElementById('pounds').value)
+    //PROCESSING - k = p * 0.45359237
+    let kilograms = pounds * 0.45359237;
+    let digits = 1;
+    let multiplier = Math.pow(10, digits);
+    kilograms = Math.round(kilograms * multiplier) / multiplier;
+    //OUTPUT - kilograms appears below the text field
+    document.getElementById('output').innerHTML = `${kilograms} kg`;
        
     </script>
 
