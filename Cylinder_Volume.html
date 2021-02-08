@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Volume of a Sphere</title>
+<style> 
+body{padding-top:30px;}
+label,input{display:block;} 
+</style>
+</head>
+<body>
+<p>Input radius value and get the volume of a sphere.</p>
+<form action="" method="post" id="MyForm">
+<label for="diameter">Diameter</label><input type="text" name="diameter" id="diameter">
+<label for="height">Height</label><input type="text" name="height" id="height">
+
+<label for="volume">Volume</label><input type="text" name="volume" id="volume">
+<input type="submit" value="Calculate Volume" id="submit">    </form>
+</body>
+</html>
+
+function volume_cylinder()
+ {
+  var volume;
+  var diameter = document.getElementById('diameter').value;
+  radius = diameter / 2;
+  volume = height * Math.PI * Math.pow(radius,2);
+  volume = volume.toFixed(0);
+  document.getElementById('volume').value = volume;
+  return false;
+ } 
+window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;

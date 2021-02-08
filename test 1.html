@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Volume of a Cylinder</title>
+  </head>
+  <body>
+    <header>
+      <h2>Test question 2</h2>
+    </header>
+    <main>
+      <h3>Volumne of a Round Cylinder</h3>
+      <label>Diameter: <input type="number" id="inputDiameter" /></label>
+
+      <hr />
+      <label>Height: <input type="number" id="inputHeight" /></label>
+      <hr />
+
+      <label
+        ><button onclick="Cylinder_Volume()">Calculate Volume</button></label
+      >
+
+      <p><span id="output"></span></p>
+    </main>
+
+    <script> //function
+      function Cylinder_Volume() {
+        //input height and diamiter
+        let diameter = parseFloat(
+          document.getElementById("inputDiameter").value
+        );
+
+        let height = parseFloat(document.getElementById("inputHeight").value);
+//do calsulations
+        let radius = diameter / 2;
+        let volume = height * Math.PI * radius * radius;
+//output
+var output = Math.round(volume);
+
+        document.getElementById("output").innerHTML = output;
+      }
+    </script>
+  </body>
+</html>
+
+ 
