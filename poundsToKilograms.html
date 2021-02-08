@@ -11,21 +11,21 @@
     <main>
       <h3>Convert Pounds to Kilograms</h3>
       <label>Enter Amount in Pounds:<input type="text" id="pounds" placeholder="Enter Here" ></label>
-      <label><button onclick="poundsToKilograms()"> Convert to Kilograms </button></label>
+      <label><button onclick="poundsToKilogram()"> Convert to Kilograms </button></label>
       
       <hr>
-      <span id="outputKilograms"></span>
+      <span id='outputKilograms'></span> 
     </main>
 
     <script>
-      function poundsToKilograms() {
+      function poundsToKilogram() {
     //INPUT - user enters pounds into text field
     let text = parseFloat(document.getElementById('pounds').value);
     //PROCESSING - k = p * 0.45359237
     let kilograms = pounds * 0.45359237;
     //round to one digit after decimal
     //OUTPUT - kilograms appears below the text field
-    document.getElementById('output').textContent = `${kilograms.toFixed(1)} kg`;}
+    document.getElementById('outputKilogram').textContent = `${kilograms.toFixed(1)} kg`;}
        
     </script>
 
