@@ -14,7 +14,7 @@
       <label><button onclick="poundsToKilogram()"> Convert to Kilograms </button></label>
       
       <hr>
-      <span id='outputKilograms'></span> 
+      <span id='output'></span> 
     </main>
 
     <script>
@@ -25,8 +25,8 @@
     let kilograms = pounds * 0.45359237;
     //round to one digit after decimal
     //OUTPUT - kilograms appears below the text field
-    document.getElementById('outputKilogram').textContent = `${kilograms.toFixed(1)} kg`;}
-       
+    document.getElementById('output').innerHTML = `${kilograms.toFixed(1)} kg`;}
+     //document.getElementById("output").innerHTML = output;/  
     </script>
 
     <footer>&copy;20 &bull; Debra Jones &bull; BYU-Idaho &bull; CIT 160</footer>
