@@ -31,11 +31,11 @@
         );
 
         let height = parseFloat(document.getElementById("inputHeight").value);
-//do calsulations
+//do calculations
         let radius = diameter / 2;
         let volume = height * Math.PI * radius * radius;
-//output
-        var output = Math.round(volume);
+//output and round
+        let output = Math.round(volume);
 
         document.getElementById("output").innerHTML = output;
       }

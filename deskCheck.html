@@ -1,0 +1,123 @@
+
+power of else
+
+if (balance)>500) {
+    let interest = balance * 0.03;
+    balance += interest;}
+    document.getElementById('output').innerHTML = balance;
+
+if...else if... else...
+
+    if (condition) {statements}
+    else {statements;}
+
+    if(balance > 500){
+        let interest = balance * 0.03;
+        balance *= interest;
+    }
+    document.getElementById('output').innerHTML = balance;
+
+    if 
+
+    if (condition)) {statements;
+    }
+
+ switch (variable) {
+        case constValue1:
+        statements;
+        breaks;
+        <hr>
+        default;
+        statements;
+        break;
+          }
+
+          ex 
+;
+switch (classStanding){
+    case "F"
+    registerDate ="Nov 23";
+    case "S":
+    registerDate = "Nov 17";
+    case "J":
+    registerDate "Nov 12";
+    case "N"
+    registerDate "Nov 6";
+    default
+    registerDate="none";
+    alert("unknown class standing"):" +classStanding";
+    break;
+document.getElementById("output").innerHTML = registrationDate;
+
+<!DOCTYPE HTML>
+<html lang='en-us'>
+    <head>
+        <meta charset="utf-8">
+    <title>Is Even?
+    </title>
+    <body>
+    <script>/*Input: An Interger
+    *processing: Determine if the interger os even or odd
+    *Output: A message that says interger
+    */$function isEven() {
+            // get message frpm a text field and convert into an integer.
+            let text = document.getElementById('inputBox').value;
+            let number = parseInt(text);
+
+        //choose a message 
+        let message;
+        if ((number % 2) == 0)
+        { message = number + " is an even integer"; }
+        else {
+            message = number = " is an odd integer";}
+            // Display message to the user.
+            document.getElementById('output').innerHTML = message;
+        }
+        
+        </script>
+    </head>
+
+Please enter a integer: <input type="text" id="inputBox">
+<button type="button" onclick="isEven"()></button>
+<div id="output"></div>
+</body>
+</html>
+
+Nested if statements
+let sales= parseFloat(document.getElementById("salesInputBox").value);
+let rate;
+if (sales < 300) {rate = 0;}
+
+else {
+    if (sales < 600) 
+    rate = 0.02; }
+else {
+    if (sales < 1000) {
+        rate = 0.025;
+    }
+    else {
+        rate = 0.03;
+    }
+}
+let commission = sales * rate;
+let output = 'The employee earned' + commission;
+documnet,getElementById('output').innerHTML - output;
+
+example 7
+let sales = parseFloat(document.getElementById('salesInputBox').value);
+    let rate;
+    if (sales < 300) {
+        rate = 0;
+    }
+    else if (sales < 600) {
+        rate = 0.02;
+    }
+    else if (sales < 1000) {
+        rate = 0.025;
+    }
+    else {
+        rate = 0.03;
+    }
+    let commission = sales * rate;
+    let output = 'The employee earned ' + commission;
+    document.getElementById('output').innerHTML = output;
