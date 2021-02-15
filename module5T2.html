@@ -24,23 +24,20 @@
     </main>
 
     <script>
-
       function Cylinder_Volume() {
-        // this.Diameter = inputDiameter; //input of height
-        // this.Height = inputHeight; //input of diamiter
-        let diameter = parseFloat(document.getElementById("inputDiameter").value
+        let diameter = parseFloat(
+          document.getElementById("inputDiameter").value
         );
 
         let height = parseFloat(document.getElementById("inputHeight").value);
-        // divide the radius by 2
-        let radius = this.diameter / 2;
-        //formUla to get volumn
-        let volume = this.height * Math.PI * radius * radius ;
-        ("volume =", cyl.Volume().toFixed(0));  
-        //this should be the output
-        document.getElementById("output").innerHTML = volume;
+
+        let radius = diameter / 2;
+        let volume = height * Math.PI * radius * radius;
+
+var output = Math.ceil(volume);
+
+        document.getElementById("output").innerHTML = output;
       }
-      
-      </script>
+    </script>
   </body>
 </html>

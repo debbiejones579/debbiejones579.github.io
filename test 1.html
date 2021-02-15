@@ -23,7 +23,8 @@
       <p><span id="output"></span></p>
     </main>
 
-    <script> //function
+    <script>
+      //function
       function Cylinder_Volume() {
         //input height and diamiter
         let diameter = parseFloat(
@@ -31,10 +32,10 @@
         );
 
         let height = parseFloat(document.getElementById("inputHeight").value);
-//do calculations
+        //do calculations
         let radius = diameter / 2;
         let volume = height * Math.PI * radius * radius;
-//output and round
+        //output and round
         let output = Math.round(volume);
 
         document.getElementById("output").innerHTML = output;
@@ -42,5 +43,3 @@
     </script>
   </body>
 </html>
-
- 

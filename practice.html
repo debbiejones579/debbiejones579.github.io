@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>template Week 3: Template Only-Add Two Numbers</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Week 6 Calculator</h1>
+      <h2>Debra Jones</h2>
+    </header>
+    <footer>&copy;20 &bull; Debra Jones &bull; BYU-Idaho &bull; CIT 160</footer>
+    <main>
+      <h3>Calculate</h3>
+      <label> Number: <input type="text" id="number1" /></label>
+      <select name="arithmetic-operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+      </select>
+      <label> Number: <input type="text" id="number2" /></label>
 
+      <label><button onclick="checkanswer" ()></button></label>
+      <hr />
+      <label> Calculate: <input type="text" id="answer" /></label>
+      <p><span id="output"></span></p>
+    </main>
+
+    <script>
+      let number1 = parseFloat(document.getElementById('number1').value);
+      let number2 = parseFloat(document.getElementById('number2').value);
+      let answer = parseFloat(document.getElementById('number3').value);
+      let operator = document.getElementById('operator').value;
+      let correct;
+              switch (operator)(){ // enter the operations needed to perform calculations
+              case= "+"
+              addition ="+";//addition
+             case "-"
+              subtraction = "-";//subtraction
+              case "*"
+              multiplication "*"; //multiplication
+              case "/"
+              division "/";} //division
+              break;
+
+              display "Correct", otherwise "Incorrect". //if calculatons are correct or incorrect
+        if (answer == correct) {
+            document.getElementById('output').innerHTML = 'Correct!';
+        }
+        else function () {
+            document.getElementById('output').innerHTML = 'Incorrect!';
+        }
+    </script>
+  </body>
+</html>
