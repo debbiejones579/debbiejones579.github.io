@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>template Week 3: Template Only-Add Two Numbers</title>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+        <body>
+            <header>
+                <h1></h1>
+                <h2>Debra Jones</h2>
+            </header>
+            <footer>
+                &copy;20 &bull; Debra Jones &bull; BYU-Idaho &bull; CIT 160
+            </footer>
+            <main>
+            <label>Please enter an integer: <input type="text" id="integerBox"></label>
+                <br>  
+             <label><button type="button" onclick="addOddNumbers()">Total of Odd Numbers</button></label>  
+           
+                <div id="outputSum"></div>  
+            </main>
+<script>   
+ function addOddNumbers() { // enter input
+    let number = parseInt(document.getElementById('integerBox').value);
+     //this whole line is what the person enters
+    let oddnumbers = 0; //Add all odd number to get total
+    let output = 0;
+    for (let  n = 1 ;   n <= number;    n += 2 ) { 
+        output  += n ;
+        }
+// Output sum of odd integers
+         document.getElementById('outputSum').innerHTML = output;
+         }
+</script>
+</head>
+</body>
+</html>
