@@ -1,80 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div id="display1"></div>
-  <div id="display2"></div>
-  <div id="display3"></div>
-  <div id="display4"></div>
-  <script>
-
-      let output1 =  "";
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="display1"></div>
+    <div id="display2"></div>
+    <div id="display3"></div>
+    <div id="display4"></div>
+    <script>
+      let output1 = "";
       let i = 0; //starting at 0
-      while (i < 2) { //if i is less than 2 ( true)
-         //enter part1 and exicute to add 1 as long as its true 
-        output1 +=  "Part 1:" + i +"<br>";
-          i++;// executes Part 1.0, then Part 1.1, 
+      while (i < 2) {
+        //if i is less than 2 ( true)
+        //enter part1 and exicute to add 1 as long as its true
+        output1 += "Part 1:" + i + "<br>";
+        i++; // executes Part 1.0, then Part 1.1,
       } //when false termnate loop
-      document.getElementById('display1').innerHTML = output1;
+      document.getElementById("display1").innerHTML = output1;
 
-    //output should be
-    //Part 1:0
-    //Part 1:1   
+      //output should be
+      //Part 1:0
+      //Part 1:1
 
-// problem number 2
-let output2 = "";   
-for (let i = 0; i < 3; i++) { // declare variable and statemtnes , will arrive as true Part 2:0
-  if (i !== 2);              //  run loop again to arrive at false
-   //declare output computer loop arrives at
-  else {
-    output2 += `Part 2:${j}`; }
-     // run again output part 2:1
-    {             
-    output2 += `Part 2:${i}`; } //run loop for 2:2 output
-    
-    }
-document.getElementById('display2').textContent = output2; // convert output to a string
+      // problem number 2
+      let output2 = "";
+      for (let i = 0; i < 3; i++) {
+        // declare variable and statemtnes , will arrive as true Part 2:0
+        if (i !== 2) "<br>";
+        //  run loop again to arrive at false
+        //declare output computer loop arrives at
+        else {
+          output2 += `Part 2:${j}`;
+          ("<br>");
+        }
+        // run again output part 2:1
+        {
+          output2 += `Part 2:${i}`;
+        }
+        ("<br>"); //run loop for 2:2 output
+      }
+      document.getElementById("display2").textContent = output2; 
+      // convert output to a string
 
-//output should be
-//Part 2:0, Part 2:1, Part 2:2
+      //output should be
+      //Part 2:0, Part 2:1, Part 2:2
 
-//problem 3
+      //problem 3
 
+      for (
+        let k = 0;
+        k < 4;
+        k++ // variable at 0, loop continues to run until the outcome is greater than 4
+      )
+        output3 + k + " "; // loop runs  to get outputs
 
-for (let k = 0; k < 4; k++)  // variable at 0, loop continues to run until the outcome is greater than 4
-  output3 + k + " ";  // loop runs  to get outputs
+      document.getElementById("display3").textContent = output3;
 
-document.getElementById('display3').textContent = output3;
+      //output should be
+      //0 1 2 3
 
-//output should be
-//0 1 2 3 
+      //problem 4                           //
+      
+      let balance = 1000; // savings = s
+      const rate = 0.1;
+      let n = 30; //months is n
+      for (
+        let s = 0;  s < n;   s++) {// s = interest is 0, monthly balance income is less monthly interest income
+      
+        interest = balance * rate; // calculate balance to get monthly rate, * 30
+      balance += interest; }//add monthly intrest for 30 years.
+      document.getElementById("display4").textContent = totalBalance;
 
-//problem 4
-let totalBalance = "";
-let balance = 1000; // savings = s
-const rate = .10; 
-let n = 30; //months is n
-for (let s = 0; s < n; s++) // s = interest is 0, monthly balance income is less monthly interest income
-    interest = balance * rate; // calculate balance to get monthly rate, * 30 
-    balance += interest; //add monthly intrest for 30 years.
-document.getElementById('display4').textContent = totalBalance;
+      //output should be
+      //15863.09
 
-//output should be
-//15863.09
+      //problem 4
 
-//problem 4
-
-let i = 0; //input 
-while (i < 3); { //if i is less than 3 snf more than o
-    // valid statements (this is not the problem)
-    i++; // the loop adds one until it gets to 3
-}
-
-  </script>
-</body>
+      let i = 0; //input
+      while (i < 3);
+      {
+        //if i is less than 3 snf more than o
+        // valid statements (this is not the problem)
+        i++; // the loop adds one until it gets to 3
+      }
+    </script>
+  </body>
 </html>
