@@ -30,20 +30,17 @@
       let output2 = "";
       for (let i = 0; i < 3; i++) {
         // declare variable and statemtnes , will arrive as true Part 2:0
-        if (i !== 2) "<br>";
-        //  run loop again to arrive at false
-        //declare output computer loop arrives at
-        else {
-          output2 += `Part 2:${j}`;
-          ("<br>");
+        if (j !== 2) {
+          output2 += `Part 2:${j}, `;
+        } else {
+          output2 += `Part 2:${j}`; // run again output part 2:1
         }
-        // run again output part 2:1
         {
           output2 += `Part 2:${i}`;
         }
         ("<br>"); //run loop for 2:2 output
       }
-      document.getElementById("display2").textContent = output2; 
+      document.getElementById("display2").textContent = output2;
       // convert output to a string
 
       //output should be
@@ -51,10 +48,8 @@
 
       //problem 3
 
-      for (
-        let k = 0;
-        k < 4;
-        k++ // variable at 0, loop continues to run until the outcome is greater than 4
+      for ( // variable at 0, loop continues to run until the outcome is greater than 4
+        let k = 0; k < 4; k++
       )
         output3 + k + " "; // loop runs  to get outputs
 
@@ -63,30 +58,21 @@
       //output should be
       //0 1 2 3
 
-      //problem 4                           //
-      
+      //problem 4                           
+
       let balance = 1000; // savings = s
       const rate = 0.1;
       let n = 30; //months is n
-      for (
-        let s = 0;  s < n;   s++) {// s = interest is 0, monthly balance income is less monthly interest income
-      
+      for (let s = 0; s < n; s++) {
+        // s = interest is 0, monthly balance income is less monthly interest income
+
         interest = balance * rate; // calculate balance to get monthly rate, * 30
-      balance += interest; }//add monthly intrest for 30 years.
+        balance += interest;
+      } //add monthly intrest for 30 years.
       document.getElementById("display4").textContent = totalBalance;
 
       //output should be
       //15863.09
-
-      //problem 4
-
-      let i = 0; //input
-      while (i < 3);
-      {
-        //if i is less than 3 snf more than o
-        // valid statements (this is not the problem)
-        i++; // the loop adds one until it gets to 3
-      }
     </script>
   </body>
 </html>
