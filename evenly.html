@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+  
+
+    
+<label>Enter Number One: <input type="text" id="start"></label>
+<label>Enter operator: <input type="text" id="divisor"> </label> 
+<label>Enter Number Two:<input type="text" id="end"></label>
+
+    
+  <label><button type="button" onclick="isPrime()">Check</button></label>
+    <div id="output"></div>
+    
+<script>
+function isPrime() {
+    var number = parseInt(document.getElementById('start').value);
+    var number = parseInt(document.getElementById('divisor').value);
+    var number = parseInt(document.getElementById('end').value);
+
+
+    // Number of factors that evenly divide candidate
+    var factorCount = 0;
+
+    for (var divisor = 1; divisor <= number; divisor++) {
+        var remainder = number % divisor;}
+        if (remainder == 0) {
+            factorCount++;
+        
+    }
+
+    // Determine the output and show it to the user.
+    var output;
+    if (factorCount == 2) {
+        output = number + '';
+    }
+    else {
+        output = number + '';
+    }
+    document.getElementById('output').innerHTML = output;
+}
+</script>
+</body>
+</html>
