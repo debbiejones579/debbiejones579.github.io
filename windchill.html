@@ -10,6 +10,7 @@
       <h1></h1>
       <h2>Debra Jones</h2>
     </header>
+
     <main>
       <h3>Wind Chill</h3>
 
@@ -22,24 +23,32 @@
       <hr />
       <p><span id="output"></span></p>
     </main>
-
     <script>
-      function doInputOutput () { // user inputs temp and speed
-        let temp = (document.getElementById('temperature').value);
-        let windspeed =(document.getElementById('windspeed').value);
-        if(temp > 50 || windspeed < 3){ // must be in the paremeters if not error message will appear
-          document.getElementById("output").innerHTML = "ERROR: Temp needs to below 50 & Windspeed needs to be above 3!!!"
-        }
-        else{ //if the parameters are true this code will run
+      function doInputOutput() {
+        // user inputs temp and speed
+        let temp = document.getElementById("temperature").value;
+        let windspeed = document.getElementById("windspeed").value;
+        if (temp > 50 || windspeed < 3) {
+          // must be in the paremeters if not error message will appear
+          document.getElementById("output").innerHTML =
+            "ERROR: This is not your Day!!!!!!";
+        } else {
+          //if the parameters are true this code will run
           let windchill = windChill(temp, windspeed);
           document.getElementById("output").innerHTML = windchill + " F";
-        }        
-      }  
+        }
+      }
       //this function does the windchill mathmatic result in F
-      function windChill (tempF, speed) { // need rounding and powers
-        results = Math.round(35.74 + (0.6215 * tempF) - (35.75 * Math.pow(speed, 0.16)) + (0.4275 * tempF * Math.pow(speed, 0.16)));
+      function windChill(tempF, speed) {
+        // need rounding and powers
+        results = Math.round(
+          35.74 +
+            0.6215 * tempF -
+            35.75 * Math.pow(speed, 0.16) +
+            0.4275 * tempF * Math.pow(speed, 0.16)
+        );
         return results; // will be return function doinputputput
-      }      
-    </script>    
+      }
+    </script>
   </body>
 </html>
