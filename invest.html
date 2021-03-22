@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Investment Calender</h1>
+      <h2>Debra Jones</h2>
+    </header>
+    <footer>&copy;20 &bull; Debra Jones &bull; BYU-Idaho &bull; CIT 160</footer>
+    <main>
+      <h3></h3>
+    
+      <label align=left>Amount Invested: <input type="text" id="investment" align=right/></label><br>
+      <label align=left>Annual Rate(example: 0.08): <input type="text" id="annualRate" align=right/></label><br>
+      <label align=left>Number of Years: <input type="text" id="years" align=right/></label><br>
+      <label align=left>Periods Per Year: <input type="text" id="periodsPerYear" align=right/></label><br>
+      <label align=center><button type="button" onclick="doFV()">Compute Future Balance</button></label><br> 
+      
+      <p align=center><span id="output"></span></p>
+      <hr />
+    </main>
+
+    <script>
+      function doFV() {
+
+        let principal = parseFloat(document.getElementById("investment").value);
+        let annualRate = parseFloat(document.getElementById("annualRate").value);
+        let years = parseInt(document.getElementById("years").value);
+        let periodsPerYear = parseInt(document.getElementById("periodsPerYear").value);
+
+        let futureValue = computeFutureValue(principal, annualRate, years, periodsPerYear);
+                 
+        //document.getElementById("output").innerHTML.value;
+
+        document.getElementById("output").innerHTML = "Your Return On Investment: $" + futureValue;
+
+      } //principal, annual rate, number of years, period per year
+       
+      function computeFutureValue (principal, annualRate, years, periodsPerYear){
+        // formula for computing future valuef = a (1 + r)n
+        //let f = FutureValue, a = investment, r = annual % rate, n = periods per year;
+
+        let ppy = periodsPerYear;
+        let ar = annualRate;
+        let y = years;
+        let a = principal;
+        let n = (y * ppy);
+        let r = (ar / ppy);
+        
+        let power = Math.pow((1 + r), n)
+        let f = (a * power).toFixed(2);
+    
+        return f;
+      }
+    </script>
+  </body>
+</html>
