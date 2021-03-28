@@ -12,9 +12,11 @@
     </header>
 
     <main>
-      <button type="button" onclick="test">Click</button>
+      <button type="button" onclick="test()">Click</button>
       <hr />
-      <div id="output"></div>
+      <div>
+        <p><span id="output"></span></p>
+      </div>
       <script>
         /* Defining Table
  /* Defining Table
@@ -35,13 +37,28 @@
           let mid2 = getMiddle(list2);
 
           // Build a string to display to the user.
-          let output = sum1 + "<br>" + addEnds;
-          sum2 + "<br>" + addends;
-          mid1 + "<br>" + getMiddle;
-          mid2 + "<br>" + getMiddle;
+          let output = sum1 + "<br>" + sum2 + "<br>" + mid1 + "<br>" + mid2;
 
           // Display the output string for the user to see.
           document.getElementById("output").innerHTML = output;
+        }
+
+        //
+        function addEnds(list) {
+          let value1 = list[0];
+          let value2 = list[list.length - 1];
+
+          sum = value1 + value2;
+          return sum;
+        }
+
+        //
+        function getMiddle(list) {
+          if (list.length % 2 == 1) {
+            return list[(list.length - 1) / 2];
+          } else {
+            return (list[list.length / 2] + list[list.length / 2 - 1]) / 2;
+          }
         }
       </script>
     </main>
