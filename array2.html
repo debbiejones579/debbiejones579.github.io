@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <!DOCTYPE html>
-  <html>
-    <head>
+<head>
       <meta charset="utf-8" />
       <title>Array 1</title>
       <link href="css/style.css" rel="stylesheet" />
-    </head>
+</head>
 
-    <body>
-      <main>
-        <button type="button" onclick="test()">Click</button>
+<body>
+     <main>
+        <button type="button" onclick="test()"></button>
         <hr />
         <div>
           <p><span id="output"></span></p>
@@ -18,39 +16,44 @@
       </main>
 
       <script>
-        function test() {
-          let list = [17, 8, 9, 5, 20];
-          let multiplier = 3;
-          let result1 = 0;
-          let result2 = 0;
-          let result3 = 0;
-          result1 = countEvens(list);
-        //result2 = multiply(list, multiplier);
-        result3 = "These are the even numbers of the array list: " + result1 + "<br>" + "This is the array list multiplied by 3: " + result2;
-        document.getElementById("outputDiv").innerHTML = result3;
+                function test() {
+                  let list = [17, 8, 9, 5, 20];
+                  let multiplier = 3;
+                  let result1 = 0;
+                  let result2 = 0;
+                  let result3 = 0;
+                  result1 = countEvens(list);
+                  result2 = multiply(list, multiplier);
+                  result3 =
+                    "Even Numbers:" +
+                    result1 +
+                    "<br>" +
+                    "Array multiplied by 3:" +
+                    result2;
+                  document.getElementById("output").innerHTML = result3;
 
-          //This function will find the even intergers in the array.
-          function countEvens(list) {
-            var evens = [];
-            for (let i = 0; i < list.length; ++i) {
-              if (list[i] % 2 === 0) {
-                evens.push(list[i]);
-              }
+                  //This function will find the even intergers in the array.
+                  // This function will find the even intergers in the array.
+                  function countEvens(list) {
+                let evens = [];
+                for (let i = 0; i < list.length; ++i) {
+                    if ((list[i] % 2) === 0) {
+                        evens.push(list[i]);
+                    }
+                }
+                        return evens;
+
             }
-            return evens;
-          }
-        }
+        
+    
+                // This function will multiply the array list by a multiplier.
+                function multiply(list, multiplier) {
+                  let products;
+                  products=list.map(function(list){return list * multiplier;});
 
-        // This function will multiply the array list by a multiplier.
-        function multiply(list, multiplier) {
-          var products;
-          products = list.map(function (list) {
-            return list * multiplier;
-          });
-          return products;
-          document.getElementById("output").innerHTML = output;
-        }
+                 return products;
+                }}
       </script>
     </body>
-  </html>
+  
 </html>
