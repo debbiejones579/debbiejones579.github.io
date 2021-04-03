@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <title>Array 1</title>
+      <link href="css/style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+      <main>
+        <button type="button" onclick="test()">Click</button>
+        <hr />
+        <div>
+          <p><span id="output"></span></p>
+        </div>
+      </main>
+
+      <script>
+        function test() {
+          let list = [17, 8, 9, 5, 20];
+          let multiplier = 3;
+          let result1 = 0;
+          let result2 = 0;
+          let result3 = 0;
+          result1 = countEvens(list);
+        //result2 = multiply(list, multiplier);
+        result3 = "These are the even numbers of the array list: " + result1 + "<br>" + "This is the array list multiplied by 3: " + result2;
+        document.getElementById("outputDiv").innerHTML = result3;
+
+          //This function will find the even intergers in the array.
+          function countEvens(list) {
+            var evens = [];
+            for (let i = 0; i < list.length; ++i) {
+              if (list[i] % 2 === 0) {
+                evens.push(list[i]);
+              }
+            }
+            return evens;
+          }
+        }
+
+        // This function will multiply the array list by a multiplier.
+        function multiply(list, multiplier) {
+          var products;
+          products = list.map(function (list) {
+            return list * multiplier;
+          });
+          return products;
+          document.getElementById("output").innerHTML = output;
+        }
+      </script>
+    </body>
+  </html>
+</html>
